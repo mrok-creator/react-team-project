@@ -2,21 +2,21 @@ import PropTypes from 'prop-types';
 
 import s from './section.module.css';
 
-function Section({ title, children }) {
+function Container({ title, children }) {
   return (
-    <div className={s.section}>
+    <div className={s.container}>
       <h2 className={s.title}>{title}</h2>
       {children}
     </div>
   );
 }
 
-Section.defaultProps = {
+Container.defaultProps = {
   title: '',
 };
-Section.propTypes = {
+Container.propTypes = {
   title: PropTypes.string,
 };
 
-export default Section;
+export default Container;
 //
