@@ -39,7 +39,7 @@ export const logIn = async user => {
 };
 
 export const logOut = async () => {
-  const { data } = await instance.post('/auth/register', user);
+  const { data } = await instance.post('/auth/register');
   removeToken();
   return data;
   //  nothing to return

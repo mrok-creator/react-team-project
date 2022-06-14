@@ -6,7 +6,7 @@ import s from './modal.module.css';
 
 const modalRoot = document.getElementById('modal-root');
 
-function Modal({ children }) {
+function Modal({ close, children }) {
   useEffect(() => {
     document.addEventListener('keydown', closeModal);
 
