@@ -3,11 +3,11 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = '';
 
 const testSlice = createSlice({
-  name: 'auth',
+  name: 'testType',
   initialState,
   reducers: {
-    add: (store, { payload }) => `${payload}`,
-    remove: store => '',
+    add: (_, { payload }) => payload,
+    remove: () => '',
   },
 });
 

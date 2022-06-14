@@ -10,7 +10,7 @@ const MainPage = lazy(() => import('pages/MainPage'));
 const AuthPage = lazy(() => import('pages/AuthPage'));
 const TestPage = lazy(() => import('pages/TestPage'));
 const ResultPage = lazy(() => import('pages/ResultPage'));
-const UsefulInfo = lazy(() => import('pages/MaterialsPage'));
+const MaterialsPage = lazy(() => import('pages/MaterialsPage'));
 const ContactsPage = lazy(() => import('pages/ContactsPage'));
 
 const NavigationRoutes = () => {
@@ -18,17 +18,17 @@ const NavigationRoutes = () => {
     <div>
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/" element={<LayOut />}>
-            <Route index element={<MainPage />} />
+          <Route element={<LayOut />}>
             <Route path="/contacts" element={<ContactsPage />} />
 
             <Route element={<PublicRoutes />}>
-              <Route path="auth" element={<AuthPage />} />
+              <Route path="/auth" element={<AuthPage />} />
             </Route>
             <Route element={<PrivateRoutes />}>
+              <Route path="/" element={<MainPage />} />
               <Route path="/test" element={<TestPage />} />
               <Route path="/results" element={<ResultPage />} />
-              <Route path="/useful-info" element={<UsefulInfo />} />
+              <Route path="/useful-info" element={<MaterialsPage />} />
             </Route>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
