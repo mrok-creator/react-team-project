@@ -1,0 +1,60 @@
+@import-normalize; /* bring in normalize.css styles */
+
+:root {
+  --accent-color: #ff6b09;
+  --bg-color: #02172a;
+  --white-color: #ffffff;
+  --black-color: #000000;
+}
+
+body {
+  font-size: 16px;
+  color: var(--black-color);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.19;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 744px;
+    padding: 0 36px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1278px;
+    padding: 0 16px;
+  }
+}
