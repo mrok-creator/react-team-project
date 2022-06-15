@@ -1,0 +1,14 @@
+.sectiom {
+    padding-top: 34px;
+    padding-bottom: 51px;
+}
+
+.title {
+    margin-bottom: 12px;
+    text-align: center;
+    font-family: 'Montserrat';
+        font-style: normal;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.22;
+}
