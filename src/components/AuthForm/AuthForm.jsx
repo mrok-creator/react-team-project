@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { initialState } from './initialState';
 import s from './authForm.module.css';
-import google from '../../images/google.png';
+// import google from '../../images/google.png';
 
 const AuthForm = ({ register, login }) => {
   const [form, setForm] = useState(initialState);
@@ -28,10 +28,10 @@ const AuthForm = ({ register, login }) => {
 
   return (
     <div className={s.wrap}>
-      <h2 className={s.title}>You can use your Google Account to authorize:</h2>
+      {/* <h2 className={s.title}>You can use your Google Account to authorize:</h2>
       <div className={s.imgWrap}>
-        <img className={s.img} src={google} alt="" />
-      </div>
+        <img className={s.img} src={google} alt="google" />
+      </div> */}
       <h2 className={s.title}>
         Or login to our app using e-mail and password:
       </h2>

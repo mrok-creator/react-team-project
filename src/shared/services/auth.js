@@ -23,6 +23,18 @@ export const signIn = async body => {
   return data;
 };
 
+export const getCurrentUser = async accessToken => {
+  addToken(accessToken);
+  try {
+    const { data } = await instance.get('/user');
+    return data;
+    // data return {email}
+  } catch (error) {
+    removeToken();
+    throw error;
+  }
+};
+
 export const logOut = async () => {
   const { data } = await instance.post('/auth/logout');
   removeToken();
@@ -45,17 +57,6 @@ export const logInByGoogle = async () => {
   //     id: '62a85940f4879a0746462b69',
   //   },
   // };
-};
-
-export const getCurrentUser = async () => {
-  try {
-    const { data } = await instance.get('/user');
-    return data;
-    // data return {email}
-  } catch (error) {
-    removeToken();
-    throw error;
-  }
 };
 
 export default instance;

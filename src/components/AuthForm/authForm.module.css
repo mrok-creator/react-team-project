@@ -21,7 +21,7 @@
 .title:last-of-type {
   margin-bottom: 20px;
 }
-.imgWrap {
+/* .imgWrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@
 .img {
   width: 84px;
   height: 18px;
-}
+} */
 
 .input {
   width: 100%;
@@ -102,9 +102,9 @@
   .title:last-of-type {
     margin-bottom: 32px;
   }
-  .imgWrap {
+  /* .imgWrap {
     margin: 32px 0;
-  }
+  } */
   .input {
     width: 425px;
   }

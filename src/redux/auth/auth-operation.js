@@ -36,6 +36,21 @@ export const signIn = createAsyncThunk(
   }
 );
 
+export const getCurrentUser = createAsyncThunk(
+  'auth/getCurrentUser',
+  async (_, { rejectWithValue, getState }) => {
+    try {
+      const { auth } = getState();
+      const { accessToken } = auth;
+      const user = await services.getCurrentUser(accessToken);
+      Notify.success('Вітаю, Ви успішно залогінились!');
+      return user;
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
+
 //logOut
 export const logOut = createAsyncThunk('auth/logOut', async () => {
   await services.logOut;
