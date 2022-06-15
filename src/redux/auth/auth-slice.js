@@ -5,8 +5,8 @@ import { signIn, signUp, getCurrentUser, logOut } from './auth-operation';
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  //реєстрація нового юзера
   extraReducers: {
+    //реєстрація нового юзера
     [signUp.pending]: (store, _) => ({ ...store, loading: true, error: null }),
     [signUp.fulfilled]: (store, { payload }) => ({
       ...store,
