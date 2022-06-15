@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseUrl: 'https://protest-backend.goit.global',
+  baseURL: 'https://protest-backend.goit.global',
 });
 
 const addToken = token => {
