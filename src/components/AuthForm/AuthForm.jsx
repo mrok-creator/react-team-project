@@ -32,9 +32,7 @@ const AuthForm = ({ register, login }) => {
       <div className={s.imgWrap}>
         <img className={s.img} src={google} alt="google" />
       </div> */}
-      <h2 className={s.title}>
-        Or login to our app using e-mail and password:
-      </h2>
+      <h2 className={s.title}>Login to our app using e-mail and password:</h2>
       <form action="" className={s.form}>
         <div className={s.wrapInput}>
           <input
