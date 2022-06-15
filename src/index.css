@@ -1,4 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -7,6 +7,12 @@
   --white-color: #ffffff;
   --black-color: #000000;
   --main-bg-color: #e5e5e5;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
 
 body {
