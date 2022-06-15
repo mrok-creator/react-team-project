@@ -43,7 +43,6 @@ export const getCurrentUser = createAsyncThunk(
       const { auth } = getState();
       const { accessToken } = auth;
       const user = await services.getCurrentUser(accessToken);
-      Notify.success('Вітаю, Ви успішно залогінились!');
       return user;
     } catch (error) {
       return rejectWithValue(error);
