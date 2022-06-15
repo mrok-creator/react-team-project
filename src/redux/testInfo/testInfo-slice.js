@@ -1,12 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = '';
+const initialState = {
+  testType: '',
+  testAnswers: {},
+};
 
 const testSlice = createSlice({
   name: 'testType',
   initialState,
   reducers: {
-    add: (_, { payload }) => payload,
+    addType: (store, { payload }) => ({ ...store, testType: payload }),
+    addAnswers: (store, { payload }) => ({ ...store, testAnswers: payload }),
     remove: () => '',
   },
 });
