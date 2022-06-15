@@ -1,0 +1,22 @@
+.section {
+  padding: 26px 0 20px;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.btn {
+  cursor: pointer;
+  font-family: inherit;
+  background-color: var(--accent-color);
+  padding: 17px 14px;
+  height: 48px;
+  min-width: 130px;
+  color: var(--white-color);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  border: 0;
+}

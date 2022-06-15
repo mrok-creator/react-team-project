@@ -1,7 +1,7 @@
 import instance from './auth';
 
 export const getQuestions = async type => {
-  const { data } = await instance.get(`/qa-test/tech/${type}`);
+  const { data } = await instance.get(`/qa-test/${type}`);
   return data;
 };
 

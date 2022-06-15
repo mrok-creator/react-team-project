@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import s from './section.module.css';
+import s from './container.module.css';
 
 function Container({ title, children }) {
   return (
