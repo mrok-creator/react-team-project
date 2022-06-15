@@ -11,7 +11,7 @@ function Modal({ close, children }) {
     document.addEventListener('keydown', closeModal);
 
     return () => document.removeEventListener('keydown', closeModal);
-  }, []);
+  }, [closeModal]);
 
   const closeModal = e => {
     if (e.code === 'Escape') {

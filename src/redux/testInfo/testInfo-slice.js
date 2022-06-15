@@ -6,7 +6,7 @@ const initialState = {
 };
 
 const testSlice = createSlice({
-  name: 'testType',
+  name: 'testInfo',
   initialState,
   reducers: {
     addType: (store, { payload }) => ({ ...store, testType: payload }),

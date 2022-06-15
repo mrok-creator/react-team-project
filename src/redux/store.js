@@ -12,7 +12,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-import testReducer from './testType/testType-slice';
+import testReducer from './testInfo/testInfo-slice';
 import authReducer from './auth/auth-slice';
 
 const userPersistConfig = {
@@ -25,7 +25,7 @@ const persistedReducer = persistReducer(userPersistConfig, authReducer);
 
 export const store = configureStore({
   reducer: {
-    testType: testReducer,
+    testInfo: testReducer,
     auth: persistedReducer,
   },
   middleware: getDefaultMiddleware =>
