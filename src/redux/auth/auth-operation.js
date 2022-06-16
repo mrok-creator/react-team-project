@@ -39,9 +39,10 @@ export const signIn = createAsyncThunk(
 export const getCurrentUser = createAsyncThunk(
   'auth/getCurrentUser',
   async (_, { rejectWithValue, getState }) => {
+    const { auth } = getState();
+    const { accessToken } = auth;
+    if (!accessToken) return;
     try {
-      const { auth } = getState();
-      const { accessToken } = auth;
       const user = await services.getCurrentUser(accessToken);
       return user;
     } catch (error) {
