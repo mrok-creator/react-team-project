@@ -22,7 +22,7 @@ function TestCard({ item, index, getAnswer, data }) {
       </h3>
       <h4 className={s.subtitle}>{question}</h4>
       <div className={s.line}></div>
-      <div className={s.form}>{allAnswers}</div>
+      <div className={s.answers}>{allAnswers}</div>
     </div>
   );
 }

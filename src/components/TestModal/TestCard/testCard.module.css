@@ -30,7 +30,25 @@
   margin-right: auto;
   margin-bottom: 32px;
 }
-.form {
+.answers {
   display: flex;
   flex-direction: column;
+}
+/* -----------Tablet------------- */
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 40px 73px 60px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .subtitle {
+    font-size: 22px;
+    line-height: 1.36;
+    margin-bottom: 28px;
+  }
+  .line {
+    width: 336px;
+    margin-bottom: 40px;
+  }
 }

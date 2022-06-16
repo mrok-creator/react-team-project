@@ -1,22 +1,30 @@
 import { useState } from 'react';
+import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+// import { useNavigate } from 'react-router-dom';
+
+import { ReactComponent as Arrow } from '../../images/arrow.svg';
+import { ReactComponent as Result } from '../../images/result.svg';
 
 import TestCard from './TestCard';
-import { ReactComponent as Arrow } from '../../images/arrow.svg';
+import { getTestAnswers } from '../../redux/testInfo/testInfo-selector';
+import { actions } from '../../redux/testInfo/testInfo-slice';
 
 import s from './testModal.module.css';
 
 function TestModal({ items }) {
   const [idx, setIdx] = useState(0);
-  const [arrAnswers, setArrAnswers] = useState(new Map());
+  const [mapAnswers, setMapAnswers] = useState(new Map());
+  const dispatch = useDispatch();
+  // const navigate = useNavigate();
 
   const activeCard = items.find((_, index) => idx === index);
   const { questionId } = activeCard;
 
   const getAnswer = answer => {
-    const currentMap = new Map(arrAnswers);
-
+    const currentMap = new Map(mapAnswers);
     currentMap.set(questionId, { answer, questionId });
-    setArrAnswers(currentMap);
+
+    setMapAnswers(currentMap);
   };
   const handelDecrement = () => {
     setIdx(prevIdx => prevIdx - 1);
@@ -24,6 +32,13 @@ function TestModal({ items }) {
   const handelIncrement = () => {
     setIdx(prevIdx => prevIdx + 1);
   };
+  const handelResult = () => {
+    // navigate('/results');
+    const action = actions.addAnswers([...mapAnswers.values()]);
+    dispatch(action);
+  };
+  // console.log([...mapAnswers.values()]);
+  const isAnswered = mapAnswers.get(questionId);
 
   return (
     <>
@@ -31,7 +46,7 @@ function TestModal({ items }) {
         item={activeCard}
         index={idx}
         getAnswer={getAnswer}
-        data={arrAnswers.get(questionId)}
+        data={isAnswered}
       />
 
       <div className={s.groupe}>
@@ -42,15 +57,30 @@ function TestModal({ items }) {
           onClick={handelDecrement}
         >
           <Arrow className={s.left} />
+          <span className={s.btnText}>Previous question</span>
         </button>
-        <button
-          disabled={idx === items.length - 1}
-          className={s.btn}
-          type="button"
-          onClick={handelIncrement}
-        >
-          <Arrow className={s.right} />
-        </button>
+        {idx !== items.length - 1 && (
+          <button
+            className={s.btn}
+            type="button"
+            onClick={handelIncrement}
+            disabled={!isAnswered}
+          >
+            <span className={s.btnText}>Next question</span>
+            <Arrow className={s.right} />
+          </button>
+        )}
+        {idx === items.length - 1 && (
+          <button
+            className={s.btn}
+            disabled={!isAnswered}
+            type="button"
+            onClick={handelResult}
+          >
+            <span className={s.btnText}>Show result</span>
+            <Result />
+          </button>
+        )}
       </div>
     </>
   );

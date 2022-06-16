@@ -4,7 +4,8 @@
   margin-top: 20px;
 }
 .btn {
-  width: 55px;
+  font-family: inherit;
+  min-width: 55px;
   height: 34px;
   border: 0;
   background-color: var(--white-color);
@@ -22,6 +23,27 @@
 .btn:disabled {
   background-color: gray;
 }
+.btnText {
+  display: none;
+}
 .right {
   transform: rotate(180deg);
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    display: flex;
+    padding-left: 14px;
+    padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 210px;
+  }
+  /* .left {
+    margin-right: 12px;
+  } */
+  .btnText {
+    display: block;
+    font-size: 12px;
+    color: var(--black-color);
+  }
 }

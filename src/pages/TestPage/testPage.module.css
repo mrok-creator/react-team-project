@@ -7,6 +7,11 @@
   align-items: center;
   margin-bottom: 18px;
 }
+.type {
+  font-size: 14px;
+  line-height: 1.21;
+  width: 100px;
+}
 .btn {
   cursor: pointer;
   font-family: inherit;
@@ -19,4 +24,24 @@
   font-size: 10px;
   line-height: 1.2;
   border: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 14px;
+    min-width: 181px;
+  }
+
+  .type {
+    font-size: 22px;
+    line-height: 1.23;
+    width: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .subContainer {
+    width: 861px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
 }
