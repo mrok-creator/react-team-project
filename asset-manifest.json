@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/react-team-project/static/css/main.8300baf2.css",
-    "main.js": "/react-team-project/static/js/main.2bb3dc93.js",
+    "main.css": "/react-team-project/static/css/main.030f918e.css",
+    "main.js": "/react-team-project/static/js/main.e51a4298.js",
+    "static/media/materials-bg-desktopx2.jpg": "/react-team-project/static/media/materials-bg-desktopx2.05ceebfff450eec4e3bb.jpg",
+    "static/media/materials-bg-tabx2.jpg": "/react-team-project/static/media/materials-bg-tabx2.7dcf8b757c8c67e51055.jpg",
+    "static/media/materials-bg-desktopx1.jpg": "/react-team-project/static/media/materials-bg-desktopx1.504743d86ce6ce5b3f0d.jpg",
+    "static/media/materials-bg-tabx1.jpg": "/react-team-project/static/media/materials-bg-tabx1.ad19362a2191ee9d9da9.jpg",
+    "static/media/materials-bg-mobx2.jpg": "/react-team-project/static/media/materials-bg-mobx2.255dba0c8517fd7c332f.jpg",
     "index.html": "/react-team-project/index.html",
-    "main.8300baf2.css.map": "/react-team-project/static/css/main.8300baf2.css.map",
-    "main.2bb3dc93.js.map": "/react-team-project/static/js/main.2bb3dc93.js.map"
+    "main.030f918e.css.map": "/react-team-project/static/css/main.030f918e.css.map",
+    "main.e51a4298.js.map": "/react-team-project/static/js/main.e51a4298.js.map"
   },
   "entrypoints": [
-    "static/css/main.8300baf2.css",
-    "static/js/main.2bb3dc93.js"
+    "static/css/main.030f918e.css",
+    "static/js/main.e51a4298.js"
   ]
 }
