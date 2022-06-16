@@ -3,6 +3,19 @@
     padding-bottom: 51px;
 }
 
+@media screen and (min-width: 768px) {.section{
+    padding-top: 42px;
+    padding-bottom: 156px;
+}
+}
+
+ @media screen and (min-width: 1280px) {
+    .section {
+        padding-top: 42px;
+        padding-bottom: 65px;
+    }
+ }
+
 .title {
     margin-bottom: 12px;
     text-align: center;
@@ -23,6 +36,3 @@
     }
  }
 
- @media screen and (min-width: 1280px) {
-  
- }

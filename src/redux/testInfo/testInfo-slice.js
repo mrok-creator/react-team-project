@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  testType: 'Testing Teory',
+  testType: '',
   testAnswers: [],
 };
 
