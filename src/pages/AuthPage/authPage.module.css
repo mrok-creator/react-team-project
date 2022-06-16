@@ -1,0 +1,69 @@
+.authPage {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 40px 20px 34px;
+  background-color: #f5f6fb;
+}
+
+.wrap {
+  display: block;
+}
+.title {
+  margin-bottom: 8px;
+
+  font-family: 'Montserrat';
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  color: var(--black-color);
+}
+.text {
+  margin-bottom: 24px;
+
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 480px) {
+  .authPage {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .authPage {
+    width: 768px;
+    padding: 80px 115px 70px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .text {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .authPage {
+    display: flex;
+    align-items: center;
+    width: 1280px;
+    padding: 100px 125px;
+  }
+  .wrap {
+    width: 420px;
+    margin-right: 112px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+  .text {
+    font-size: 18px;
+  }
+}
