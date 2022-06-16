@@ -31,6 +31,9 @@ margin-bottom: 40px;
         font-size: 14px;
     }
  }
+ .answers {
+    text-align: center;
+ }
 
 
 .list {
@@ -111,7 +114,7 @@ margin-bottom: 40px;
 
 @media screen and (min-width: 768px) {
     .mainMessage {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         font-size: 22px;
         line-height: 1.36;
     }

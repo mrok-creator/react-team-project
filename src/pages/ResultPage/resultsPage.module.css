@@ -1,11 +1,11 @@
-.sectiom {
+.section {
     padding-top: 34px;
     padding-bottom: 51px;
 }
 
 @media screen and (min-width: 768px) {.section{
     padding-top: 42px;
-    padding-bottom: 156px;
+    padding-bottom: 115px;
 }
 }
 
