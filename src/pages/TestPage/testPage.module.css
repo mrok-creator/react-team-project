@@ -27,6 +27,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .section {
+    padding-top: 40px;
+    padding-bottom: 273px;
+  }
   .btn {
     font-size: 14px;
     min-width: 181px;
@@ -39,6 +43,9 @@
   }
 }
 @media screen and (min-width: 1280px) {
+  .section {
+    padding-bottom: 107px;
+  }
   .subContainer {
     width: 861px;
     padding: 0 20px;

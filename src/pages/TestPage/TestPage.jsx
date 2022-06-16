@@ -75,7 +75,9 @@ function TestPage() {
       <Container>
         <div className={s.subContainer}>
           <div className={s.meta}>
-            <p className={s.type}>[ Testing theory_ ]</p>
+            <p className={s.type}>
+              [ {typeOfQuestion || 'Test did not find'}_ ]
+            </p>
             <button type="button" className={s.btn} onClick={backToMain}>
               Finish test
             </button>
