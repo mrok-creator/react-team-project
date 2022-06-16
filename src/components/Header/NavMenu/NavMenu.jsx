@@ -4,6 +4,8 @@ function NavMenu() {
   return (
     <>
       <NavLink to="/">Home</NavLink>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/">Home</NavLink>
     </>
   );
 }
