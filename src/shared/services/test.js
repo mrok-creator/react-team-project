@@ -6,6 +6,6 @@ export const getQuestions = async type => {
 };
 
 export const getResult = async (type, answers) => {
-  const { data } = await instance.get(`/qa-test/${type}-results`, answers);
+  const { data } = await instance.post(`/qa-test/${type}-results`, answers);
   return data;
 };
