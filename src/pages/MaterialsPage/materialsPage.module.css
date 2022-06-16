@@ -1,0 +1,136 @@
+.materials {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding-top: 40px;
+  padding-bottom: 117px;
+  width: 100%;
+  height: 100vh;
+
+  font-family: 'Montserrat';
+  font-size: 10px;
+  line-height: 1.6;
+
+  color: var(--black-color);
+  background-color: var(--white-color);
+
+  background-image: url(shared/images/materials-bg-mobx1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .materials {
+    background-image: url('shared/images/materials-bg-mobx2.jpg');
+  }
+}
+
+.title {
+  width: 129px;
+  height: 56px;
+  margin-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 18, 47, 0.15);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+}
+
+.list {
+  width: 207px;
+  height: 64px;
+  margin-right: auto;
+  margin-bottom: 38px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+@media screen and (min-width: 480px) {
+  .materials {
+    background-image: url('shared/images/materials-bg-tabx1.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .materials {
+    padding-top: 180px;
+    padding-bottom: 324px;
+    padding-left: 12px;
+
+    font-size: 14px;
+    line-height: 1.57;
+
+    background-image: url('shared/images/materials-bg-tabx1.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .materials {
+      background-image: url('shared/images/materials-bg-tabx2.jpg');
+    }
+  }
+  .title {
+    width: 336px;
+    height: 50px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 18, 47, 0.15);
+
+    font-size: 22px;
+    line-height: 1.36;
+  }
+  .list {
+    width: 254px;
+    height: 88px;
+    margin-left: 82px;
+    margin-right: auto;
+    margin-bottom: 38px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .materials {
+    padding-top: 100px;
+    padding-bottom: 240px;
+    padding-left: 103px;
+
+    font-size: 14px;
+    line-height: 1.57;
+
+    background-image: url('shared/images/materials-bg-desktopx1.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .materials {
+      background-image: url('shared/images/materials-bg-desktopx2.jpg');
+    }
+  }
+
+  .title {
+    width: 336px;
+    height: 50px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 18, 47, 0.15);
+
+    font-size: 22px;
+    line-height: 1.36;
+  }
+  .list {
+    width: 260px;
+    height: 88px;
+    margin-left: 60px;
+    margin-right: auto;
+    margin-bottom: 38px;
+  }
+}
