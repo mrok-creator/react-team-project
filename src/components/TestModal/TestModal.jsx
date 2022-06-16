@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 // import { useNavigate } from 'react-router-dom';
 
 import { ReactComponent as Arrow } from '../../images/arrow.svg';
 import { ReactComponent as Result } from '../../images/result.svg';
 
 import TestCard from './TestCard';
-import { getTestAnswers } from '../../redux/testInfo/testInfo-selector';
+import SliderButton from 'shared/components/SliderButton/SliderButton';
 import { actions } from '../../redux/testInfo/testInfo-slice';
 
 import s from './testModal.module.css';
@@ -37,8 +38,9 @@ function TestModal({ items }) {
     const action = actions.addAnswers([...mapAnswers.values()]);
     dispatch(action);
   };
-  // console.log([...mapAnswers.values()]);
+
   const isAnswered = mapAnswers.get(questionId);
+  const isDisabled = idx === 0;
 
   return (
     <>
@@ -50,36 +52,36 @@ function TestModal({ items }) {
       />
 
       <div className={s.groupe}>
-        <button
-          disabled={idx === 0}
-          className={s.btn}
-          type="button"
-          onClick={handelDecrement}
+        <SliderButton
+          isDisabled={isDisabled}
+          handelMover={handelDecrement}
+          text={'Previous question'}
+          Icon={Arrow}
         >
           <Arrow className={s.left} />
           <span className={s.btnText}>Previous question</span>
-        </button>
+        </SliderButton>
         {idx !== items.length - 1 && (
-          <button
-            className={s.btn}
-            type="button"
-            onClick={handelIncrement}
-            disabled={!isAnswered}
+          <SliderButton
+            isDisabled={!isAnswered}
+            handelMover={handelIncrement}
+            text={'Next question'}
+            Icon={Arrow}
           >
             <span className={s.btnText}>Next question</span>
             <Arrow className={s.right} />
-          </button>
+          </SliderButton>
         )}
         {idx === items.length - 1 && (
-          <button
-            className={s.btn}
-            disabled={!isAnswered}
-            type="button"
-            onClick={handelResult}
+          <SliderButton
+            isDisabled={!isAnswered}
+            handelMover={handelResult}
+            text={'Next question'}
+            Icon={Arrow}
           >
             <span className={s.btnText}>Show result</span>
             <Result />
-          </button>
+          </SliderButton>
         )}
       </div>
     </>
@@ -89,4 +91,14 @@ export default TestModal;
 
 TestModal.defaultProps = {
   items: [],
+};
+
+TestModal.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      answer: PropTypes.array.isRequired,
+      question: PropTypes.string.isRequired,
+      questionId: PropTypes.number.isRequired,
+    })
+  ),
 };

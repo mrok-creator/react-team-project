@@ -11,7 +11,8 @@ const testSlice = createSlice({
   reducers: {
     addType: (store, { payload }) => ({ ...store, testType: payload }),
     addAnswers: (store, { payload }) => ({ ...store, testAnswers: payload }),
-    remove: () => '',
+    // remove: () => '',
+    clear: () => ({ testType: '', testAnswers: [] }),
   },
 });
 

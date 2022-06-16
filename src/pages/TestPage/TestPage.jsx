@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSelector, shallowEqual } from 'react-redux';
+import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 
 // import { useNavigate } from 'react-router-dom';
 
@@ -9,18 +9,19 @@ import Container from '../../shared/components/Container';
 
 import { getQuestions } from '../../shared/services/test';
 import { getTypeQuestions } from 'redux/testInfo/testInfo-selector';
+import { actions } from 'redux/testInfo/testInfo-slice';
 
 import s from './testPage.module.css';
 
 function TestPage() {
   // const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [questions, setQuestions] = useState({
     items: [],
     loading: false,
     error: null,
   });
   const typeOfQuestion = useSelector(getTypeQuestions, shallowEqual);
-  console.log(typeOfQuestion);
   useEffect(() => {
     const fetchQuestions = async () => {
       setQuestions({
@@ -29,8 +30,20 @@ function TestPage() {
         error: null,
       });
       try {
-        // const type =
-        const data = await getQuestions('tech');
+        const type =
+          typeOfQuestion === 'QA technical training' ? 'tech' : 'theory';
+        // let type = '';
+        // switch (typeOfQuestion) {
+        //   case 'QA technical training':
+        //     type = 'tech';
+        //     break;
+        //   case 'Testing theory':
+        //     type = 'theory';
+        //     break;
+        //   default:
+        //     break;
+        // }
+        const data = await getQuestions(type);
         setQuestions(prevState => ({
           ...prevState,
           items: data,
@@ -48,6 +61,12 @@ function TestPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const backToMain = () => {
+    const action = actions.clear();
+    dispatch(action);
+    // navigate('/');
+  };
+
   const { items, loading, error } = questions;
 
   return (
@@ -57,11 +76,7 @@ function TestPage() {
         <div className={s.subContainer}>
           <div className={s.meta}>
             <p className={s.type}>[ Testing theory_ ]</p>
-            <button
-              type="button"
-              className={s.btn}
-              // onClick={navigate('/')}
-            >
+            <button type="button" className={s.btn} onClick={backToMain}>
               Finish test
             </button>
           </div>

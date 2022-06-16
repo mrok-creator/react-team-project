@@ -3,26 +3,6 @@
   justify-content: space-between;
   margin-top: 20px;
 }
-.btn {
-  font-family: inherit;
-  min-width: 55px;
-  height: 34px;
-  border: 0;
-  background-color: var(--white-color);
-  fill: var(--black-color);
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn:hover,
-.btn:focus {
-  background-color: var(--accent-color);
-  fill: var(--white-color);
-}
-.btn:disabled {
-  background-color: gray;
-}
 .btnText {
   display: none;
 }
@@ -30,17 +10,6 @@
   transform: rotate(180deg);
 }
 @media screen and (min-width: 768px) {
-  .btn {
-    display: flex;
-    padding-left: 14px;
-    padding-right: 20px;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 210px;
-  }
-  /* .left {
-    margin-right: 12px;
-  } */
   .btnText {
     display: block;
     font-size: 12px;

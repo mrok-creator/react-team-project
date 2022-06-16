@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import Radio from './Radio';
 
 import s from './testCard.module.css';
@@ -27,3 +29,10 @@ function TestCard({ item, index, getAnswer, data }) {
   );
 }
 export default TestCard;
+
+TestCard.propTypes = {
+  item: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
+  getAnswer: PropTypes.func.isRequired,
+  data: PropTypes.object,
+};
