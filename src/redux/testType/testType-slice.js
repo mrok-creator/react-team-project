@@ -13,4 +13,3 @@ const testSlice = createSlice({
 
 export const { actions } = testSlice;
 export default testSlice.reducer;
-console.log(actions);

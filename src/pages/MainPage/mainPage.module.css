@@ -1,0 +1,10 @@
+.quote {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+.btn {
+  width: 280px;
+}

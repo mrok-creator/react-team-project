@@ -1,7 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { actions } from '../../redux/testType/testType-slice';
+import s from './mainPage.module.css';
+
+import { actions } from '../../redux/testInfo/testInfo-slice';
 
 function MainPage() {
   const dispatch = useDispatch();
@@ -9,10 +11,26 @@ function MainPage() {
 
   return (
     <>
-      <button onClick={() => dispatch(actions.add('QA technical training'))}>
+      <blockquote className={s.quote}>
+        “Regression testing. What is it? If the system compiles, that's good, if
+        it boots, that's great!”
+      </blockquote>
+      <button
+        className={s.btn}
+        onClick={() => {
+          dispatch(actions.addType('QA technical training'));
+          navigate('/testPage', { replace: true });
+        }}
+      >
         QA technical training
       </button>
-      <button onClick={() => dispatch(actions.add('Testing theory'))}>
+      <button
+        className={s.btn}
+        onClick={() => {
+          dispatch(actions.addType('Testing theory'));
+          navigate('/testPage', { replace: true });
+        }}
+      >
         Testing theory
       </button>
     </>
