@@ -1,5 +1,12 @@
+import Container from 'shared/components/Container';
+import Main from 'components/Main';
+
 function MainPage() {
-  return <>{/* text two custom-btn */}</>;
+  return (
+    <Container>
+      <Main />
+    </Container>
+  );
 }
 
 export default MainPage;
