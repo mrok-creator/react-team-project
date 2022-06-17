@@ -9,6 +9,11 @@
   line-height: 1.2;
   align-items: center;
   color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  height: 56px;
+  transform: translateY(-100%);
 }
 
 
