@@ -1,7 +1,8 @@
 .contactPage {
     min-width: 320px;
     margin: 0 auto;
-    padding: 40px 20px 60px 20px;
+    padding: 40px 20px 30px 20px;
+    margin-bottom: 56px;
     text-align: center;
     background-color: #f5f6fb;
 }
@@ -79,3 +80,80 @@
 }
 }
 
+.card {
+    background-color: #ffffff;
+    text-align: start;
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover,
+.card:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
+.imgWrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 244px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0px 0px;
+}
+
+
+.description {
+    box-sizing: border-box;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.02em;
+    padding: 75px 20px;
+
+
+
+    background-color: rgba(255, 107, 9, 0.8);
+    color: #ffffff;
+    transition: transform 470ms;
+}
+
+.descriptionContainer {
+    padding: 20px;
+}
+
+.name {
+    margin-bottom: 8px;
+}
+
+.position {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #555555;
+}
+
+.card:hover .description {
+    transform: translateY(-100%);
+}
