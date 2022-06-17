@@ -6,7 +6,7 @@ function NavMenu({ isUserLoggedIn }) {
     <>
       {isUserLoggedIn && <NavLink className={getActiveLink}
         to="/">Home</NavLink>}
-      {isUserLoggedIn && <NavLink className={getActiveLink} to="/materials">Materials</NavLink>}
+      {isUserLoggedIn && <NavLink className={getActiveLink} to="/useful-info">Materials</NavLink>}
       <NavLink className={getActiveLink} to="/contacts">Contacts</NavLink>
     </>
   );
