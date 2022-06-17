@@ -7,18 +7,15 @@ import MainPage from './pages/MainPage';
 import TestPage from './pages/TestPage';
 
 import MaterialsPage from 'pages/MaterialsPage';
-
+import ResultPage from 'pages/ResultPage';
 export const App = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getCurrentUser());
-  }, [dispatch]);
   return (
     <>
       <AuthPage />
       <MainPage />
       <TestPage />
       <MaterialsPage />
+      <ResultPage />
     </>
   );
 };
