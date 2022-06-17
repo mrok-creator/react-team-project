@@ -45,6 +45,7 @@ const authSlice = createSlice({
       userData: payload,
     }),
     [getCurrentUser.rejected]: (store, { payload }) => ({
+      ...store,
       loading: false,
       error: payload,
       accessToken: '',

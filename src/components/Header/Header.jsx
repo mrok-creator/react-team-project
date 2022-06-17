@@ -1,46 +1,78 @@
-import { Outlet, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from "react"
-import s from './style.module.css';
+import { useDispatch } from 'react-redux';
+import LetteredAvatar from 'react-lettered-avatar';
+
+import useGetUserData from 'shared/hooks/useGetUserData';
+
+
 import logo from 'svg/logo1.svg'
-import logOut from "svg/sign-out.svg"
+import logOutIcon from "svg/sign-out.svg"
 import Modal from "shared/components/Modal"
 import menu from "svg/menu-24px.svg"
-import NavMenu from "components/Header/NavMenu"
-import LetteredAvatar from 'react-lettered-avatar';
+
 import MobileMenu from './MobileMenu/MobileMenu';
-import { getUser } from "redux/auth/auth-selector"
+import NavMenu from "components/Header/NavMenu"
+
+
+
 import useLogin from 'shared/hooks/useLogin';
+import { logOut } from 'redux/auth/auth-operation';
+
+import s from './style.module.css';
+
 const Header = () => {
+  const dispatch = useDispatch();
   const [menuStatus, setMenuStatus] = useState(false);
   const navigate = useNavigate()
   const handleClick = () => {
     setMenuStatus(prev => !prev)
   }
   const logOutAction = () => {
-    return
+    dispatch(logOut())
   }
   const goHome = () => {
     navigate("/")
   }
-  // const user = getUser()
-  // console.log(user)
-  // const isUserLoggedIn = useLogin()
-  // console.log(isUserLoggedIn)
-  const isUserLoggedIn = true
   const onClose = () => {
     setMenuStatus(false)
   }
+
+
+
+  const isUserLoggedIn = useLogin()
+  const user = useGetUserData();
+  let data = [];
+  if (user?.email) {
+    data = user.email.split("")
+    let i = '';
+    for (let index = 1; index < data.length; index++) {
+      const element = data[index];
+
+      if (element.toUpperCase() === element && element !== element.toLowerCase()) {
+        i = index
+        break
+      }
+
+    }
+    if (!i) {
+      data = data.join("").split('@')[0]
+    } else {
+      data = data.join("").split(data[i])[0]
+    }
+  }
+
   return (
     <div className={s.navContainer}>
       <img src={logo} onClick={goHome} alt="" className={s.logo} />
       <div className={s.linkContainer}><div className={s.menu}><NavMenu isUserLoggedIn={isUserLoggedIn} /></div>
         {isUserLoggedIn && <div className={s.letter}><LetteredAvatar
-          name="D"
+          name={data[0]}
           size={30}
           backgroundColor="#eee"
         /> </div >}
-        {isUserLoggedIn && <div className={s.name}>dimama</div>}
-        {isUserLoggedIn && <img className={s.logOut} src={logOut} alt="" />}</div>
+        {isUserLoggedIn && <div className={s.name}>{data}</div>}
+        {isUserLoggedIn && <img onClick={logOutAction} className={s.logOut} src={logOutIcon} alt="" />}</div>
       {!menuStatus && <img className={s.menuButton} onClick={handleClick} src={menu} alt="" />}
       {menuStatus && <Modal close={onClose} children={<MobileMenu handleClick={handleClick} isUserLoggedIn={isUserLoggedIn} logOut={logOutAction} />} />}
     </div>
