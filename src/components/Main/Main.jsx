@@ -2,7 +2,9 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import s from './main.module.css';
-import arrow from 'shared/images/arrow.svg';
+
+import { ReactComponent as Arrow } from 'shared/images/arrow.svg';
+// import arrow from 'shared/images/arrow.svg';
 
 import { actions } from 'redux/testInfo/testInfo-slice';
 
@@ -29,12 +31,14 @@ function Main() {
         <button className={s.btn} onClick={handleClick}>
           <span>QA technical training</span>
 
-          <img src={arrow} alt="just arrow" />
+          {/* <img src={arrow} alt="just arrow" /> */}
+          <Arrow />
         </button>
         <button className={`${s.btn} ${s.test}`} onClick={handleClick}>
           <span>Testing theory</span>
+          <Arrow />
 
-          <img src={arrow} alt="just arrow" />
+          {/* <img src={arrow} alt="just arrow" /> */}
         </button>
       </div>
     </div>
