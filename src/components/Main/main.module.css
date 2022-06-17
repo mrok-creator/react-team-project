@@ -65,6 +65,8 @@
   border-radius: 2px;
   color: var(--white-color);
   background-color: var(--bg-color);
+  cursor: pointer;
+  fill: var(--white-color);
 }
 
 .btn > span {
