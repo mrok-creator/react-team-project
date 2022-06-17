@@ -14,8 +14,10 @@ export const App = () => {
   }, [dispatch]);
   return (
     <>
-
-      <LayOut></LayOut>
+      <LayOut />
+      <AuthPage />
+      <MainPage />
+      <MaterialsPage />
     </>
   );
 };

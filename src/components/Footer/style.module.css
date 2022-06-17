@@ -1,6 +1,7 @@
 .container {
   background-color: #02172A;
   display: flex;
+  justify-content: center;
   padding: 10px;
   flex-wrap: wrap;
   font-size: 10px;
