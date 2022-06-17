@@ -1,5 +1,7 @@
-function NavMenu() {
-  return <>{/* todo userName logout btn */}</>;
+function UserMenu() {
+  return <>
+    D
+  </>;
 }
 
-export default NavMenu;
+export default UserMenu;
