@@ -1,4 +1,5 @@
 import styles from './results.module.css';
+import imagecat from 'shared/images/kisspng-cat-car.png';
 import image from 'shared/images/image.png';
 // import rectangleOrange from '../../shared/images/rectangleOrange.png';
 // import rectangleGray from '../../shared/images/rectangleGray.png';
@@ -12,7 +13,11 @@ import { actions } from 'redux/testInfo/testInfo-slice';
 
 const Results = () => {
   const [result, setResult] = useState({
-    items: { result: '30%' },
+    items: {
+      result: '59%',
+      mainMessage: 'Not bad!',
+      secondaryMessage: 'But you still need to learn some materials.',
+    },
     loading: false,
     error: null,
   });
@@ -91,11 +96,11 @@ const Results = () => {
           Total questions - <span className={styles.number}>12</span>
         </li>
       </ul>
-      <img className={styles.image} src={image} alt="Cat" />
-      <p className={styles.mainMessage}>Not bad!{items.mainMessage}</p>
-      <p className={styles.secondaryMessage}>
-        But you still need to learn some materials.{items.secondaryMessage}
-      </p>
+      {(Number.parseInt(items.result) < 60 && (
+        <img className={styles.image} src={imagecat} alt="Cat" />
+      )) || <img className={styles.image} src={image} alt="Cat" />}
+      <p className={styles.mainMessage}>{items.mainMessage}</p>
+      <p className={styles.secondaryMessage}>{items.secondaryMessage}</p>
       <button className={styles.button} type="button" onClick={tryAgainClick}>
         Try again
       </button>
