@@ -4,7 +4,6 @@ import useLogin from 'shared/hooks/useLogin';
 
 const PrivateRoutes = () => {
   const isLogin = useLogin();
-
   if (!isLogin) {
     return <Navigate to="/login" replace />;
   }

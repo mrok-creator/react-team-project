@@ -5,7 +5,7 @@ import image from 'shared/images/image.png';
 import { useState, useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { getTestType, getTestAnswers } from 'redux/testInfo/testInfo-selector';
+import { getTypeQuestions, getTestAnswers } from 'redux/testInfo/testInfo-selector';
 import { getResult } from 'shared/services/test';
 import Graffic from './Graffic';
 import { actions } from 'redux/testInfo/testInfo-slice';
@@ -17,7 +17,7 @@ const Results = () => {
     error: null,
   });
   const navigate = useNavigate();
-  const testType = useSelector(getTestType, shallowEqual);
+  const testType = useSelector(getTypeQuestions, shallowEqual);
   const testAnswers = useSelector(getTestAnswers, shallowEqual);
   const dispatch = useDispatch();
 
@@ -26,7 +26,7 @@ const Results = () => {
       setResult(prevState => ({ ...prevState, loading: true, error: null }));
       try {
         const type =
-          getTestType === 'QA technical training' ? 'tech' : 'theory';
+          getTypeQuestions === 'QA technical training' ? 'tech' : 'theory';
         const data = await getResult(type, testAnswers);
         setResult(prevState => ({
           ...prevState,
