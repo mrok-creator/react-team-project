@@ -35,7 +35,7 @@ function TestModal({ items }) {
   };
   const handelResult = () => {
     navigate('/results');
-    const action = actions.addAnswers([...mapAnswers.values()]);
+    const action = actions.addAnswers({ answers: [...mapAnswers.values()] });
     dispatch(action);
   };
 

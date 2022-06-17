@@ -1,0 +1,58 @@
+[
+  {
+    "avatar": "https://1c7fab3im83f5gqiow2qqs2k-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/KevinMitnickVideos-scaled.jpg",
+    "name": "Oleksandr",
+    "surename": "Kasianenko ",
+    "id": 1,
+    "descr": "There is no patch for human stupidity",
+    "posn": "Team-Lead | Developer"
+  },
+  {
+    "avatar": "https://pbs.twimg.com/profile_images/1358380209439973381/25ZJGVnP_400x400.jpg",
+    "name": "Serhii",
+    "surename": "Demydenko",
+    "id": 2,
+    "descr": "Anyone who buys or sells a stock, bond, or commodity for profit is a speculator if he uses intellectual foresight. If he does not do this, he is gambling.",
+    "posn": "Developer"
+  },
+  {
+    "avatar": "https://multiurok.ru/img/312085/image_5a4e4dae75dde.jpg",
+    "name": "Matvii ",
+    "surename": "Skrypka",
+    "id": 3,
+    "descr": "I am going against the current, but the direction of the current will change.",
+    "posn": "Developer"
+  },
+  {
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/2/25/Franklin-Benjamin-LOC.jpg",
+    "name": "Pavel",
+    "surename": "Lobtsov",
+    "id": 4,
+    "descr": "Investments in knowledge always give the highest profit.",
+    "posn": "Developer"
+  },
+  {
+    "avatar": "https://www.tronweekly.com/wp-content/uploads/2020/02/nakmoto.jpg",
+    "name": "Anton ",
+    "surename": "Tagirov",
+    "id": 5,
+    "descr": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks",
+    "posn": "Developer"
+  },
+  {
+    "avatar": "https://rafaelleitao.com/wp-content/uploads/2017/08/6-mentiras-e-7-verdades-Bobby-Fischer-2.jpg",
+    "name": "Oleg",
+    "surename": "Muraviov",
+    "id": 6,
+    "descr": "I play fair and play to win. If I lose, I take medicines.",
+    "posn": "Developer"
+  },
+  {
+    "avatar": "https://s0.rbk.ru/v6_top_pics/media/img/6/08/755220583450086.jpg",
+    "name": "Dmytro ",
+    "surename": "Kulakov",
+    "id": 7,
+    "descr": "What matters is the scale of the action. their absolute value. The sign doesn't matter. A minus can easily change to a plus, and vice versa. But zero never changes.",
+    "posn": "Scrum-master | Developer"
+  }
+]
