@@ -1,0 +1,81 @@
+.contactPage {
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 40px 20px 60px 20px;
+    text-align: center;
+    background-color: #f5f6fb;
+}
+
+.title {
+    
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #000000;
+    
+}
+
+.list {
+    justify-content: center;
+    display: grid;
+    grid-column-gap: 32px;
+    grid-row-gap: 20px;
+
+    grid-template-columns: 280px;
+    grid-template-rows: repeat(7, 370px);
+
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 40px auto;
+    width: 130px;
+    border-bottom: 1px solid #e1e1e1;
+
+    height: 65px;
+}
+
+@media screen and (min-width: 480px) {
+    .contactPage {
+        width: 480px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contactPage {
+        width: 768px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .list {
+        grid-template-columns: repeat(2, 335px);
+        grid-template-rows: repeat(4, 370px);
+    }
+    .box{
+        width: 322px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .contactPage {
+        width: 1280px;
+    }
+    
+
+    .list {
+        grid-template-columns: repeat(4, 288px);
+        grid-template-rows: repeat(2, 370px);
+    }
+.box {
+    width: 322px;
+}
+}
+
