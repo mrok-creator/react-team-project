@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { ReactComponent as Arrow } from '../../shared/images/arrow.svg';
 import { ReactComponent as Result } from '../../shared/images/result.svg';
@@ -16,7 +16,7 @@ function TestModal({ items }) {
   const [idx, setIdx] = useState(0);
   const [mapAnswers, setMapAnswers] = useState(new Map());
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const activeCard = items.find((_, index) => idx === index);
   const { questionId } = activeCard;
@@ -34,7 +34,7 @@ function TestModal({ items }) {
     setIdx(prevIdx => prevIdx + 1);
   };
   const handelResult = () => {
-    // navigate('/results');
+    navigate('/results');
     const action = actions.addAnswers([...mapAnswers.values()]);
     dispatch(action);
   };

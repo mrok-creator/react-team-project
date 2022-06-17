@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import Loader from 'shared/components/Loader';
 import TestModal from '../../components/TestModal';
@@ -14,7 +14,7 @@ import { actions } from 'redux/testInfo/testInfo-slice';
 import s from './testPage.module.css';
 
 function TestPage() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [questions, setQuestions] = useState({
     items: [],
@@ -32,17 +32,7 @@ function TestPage() {
       try {
         const type =
           typeOfQuestion === 'QA technical training' ? 'tech' : 'theory';
-        // let type = '';
-        // switch (typeOfQuestion) {
-        //   case 'QA technical training':
-        //     type = 'tech';
-        //     break;
-        //   case 'Testing theory':
-        //     type = 'theory';
-        //     break;
-        //   default:
-        //     break;
-        // }
+
         const data = await getQuestions(type);
         setQuestions(prevState => ({
           ...prevState,
@@ -64,7 +54,7 @@ function TestPage() {
   const backToMain = () => {
     const action = actions.clear();
     dispatch(action);
-    // navigate('/');
+    navigate('/');
   };
 
   const { items, loading, error } = questions;
