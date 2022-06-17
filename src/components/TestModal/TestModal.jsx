@@ -96,7 +96,7 @@ TestModal.defaultProps = {
 TestModal.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      answer: PropTypes.array.isRequired,
+      answers: PropTypes.array.isRequired,
       question: PropTypes.string.isRequired,
       questionId: PropTypes.number.isRequired,
     })
