@@ -30,7 +30,7 @@ const NavigationRoutes = () => {
               <Route path="/results" element={<ResultPage />} />
               <Route path="/useful-info" element={<MaterialsPage />} />
             </Route>
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<Navigate to="/auth" replace />} />
           </Route>
         </Routes>
       </Suspense>
