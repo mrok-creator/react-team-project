@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-team-project/static/css/main.8a0828ed.css",
-    "main.js": "/react-team-project/static/js/main.42648fda.js",
+    "main.js": "/react-team-project/static/js/main.b261deec.js",
     "static/media/materials-bg-desktopx2.jpg": "/react-team-project/static/media/materials-bg-desktopx2.05ceebfff450eec4e3bb.jpg",
     "static/media/materials-bg-tabx2.jpg": "/react-team-project/static/media/materials-bg-tabx2.7dcf8b757c8c67e51055.jpg",
     "static/media/materials-bg-desktopx1.jpg": "/react-team-project/static/media/materials-bg-desktopx1.504743d86ce6ce5b3f0d.jpg",
@@ -10,10 +10,10 @@
     "index.html": "/react-team-project/index.html",
     "static/media/arrow.svg": "/react-team-project/static/media/arrow.283d3a37e6caeb1665a5e756bd2abe12.svg",
     "main.8a0828ed.css.map": "/react-team-project/static/css/main.8a0828ed.css.map",
-    "main.42648fda.js.map": "/react-team-project/static/js/main.42648fda.js.map"
+    "main.b261deec.js.map": "/react-team-project/static/js/main.b261deec.js.map"
   },
   "entrypoints": [
     "static/css/main.8a0828ed.css",
-    "static/js/main.42648fda.js"
+    "static/js/main.b261deec.js"
   ]
 }
