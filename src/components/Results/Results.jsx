@@ -58,7 +58,7 @@ const Results = () => {
     navigate('/test');
   };
 
-  const { items, loading } = result;
+  const { items } = result;
 
   return (
     <>
