@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  testType: '',
-  testAnswers: {},
+  testType: 'Theory Test',
+  testAnswers: [],
 };
 
 const testSlice = createSlice({
@@ -11,7 +11,13 @@ const testSlice = createSlice({
   reducers: {
     addType: (store, { payload }) => ({ ...store, testType: payload }),
     addAnswers: (store, { payload }) => ({ ...store, testAnswers: payload }),
-    remove: () => '',
+
+
+    clear: () => ({ testType: '', testAnswers: [] }),
+
+    removeAnswers: store => ({ ...store, testAnswers: [] }),
+ 
+
   },
 });
 

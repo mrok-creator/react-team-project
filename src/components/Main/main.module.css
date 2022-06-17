@@ -1,0 +1,133 @@
+.wrapper {
+  padding: 34px 0 39px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote {
+  margin: 0;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  text-align: center;
+}
+
+.quote:after {
+  content: '';
+  background-color: #00122f;
+  opacity: 0.15;
+  margin-top: 30px;
+  display: inline-block;
+  width: 130px;
+  height: 1px;
+}
+
+.author {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+.authorAbout {
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+.btnWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 50px 30px 50px;
+  width: 280px;
+
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  border: none;
+  border-radius: 2px;
+  color: var(--white-color);
+  background-color: var(--bg-color);
+  cursor: pointer;
+  fill: var(--white-color);
+}
+
+.btn > span {
+  margin-bottom: 32px;
+}
+.btn.test {
+  background-color: var(--accent-color);
+}
+.btn:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 82px 0 181px 0;
+  }
+  .quote {
+    font-size: 22px;
+    line-height: 1.36;
+  }
+  .quote:after {
+    width: 322px;
+  }
+  .btn {
+    padding: 60px 30px 46px 30px;
+    width: 400px;
+    font-size: 32px;
+    line-height: 1.21;
+  }
+  .btn > span {
+    margin-bottom: 12px;
+  }
+  .btn.test {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .author {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+  .authorAbout {
+    margin-bottom: 60px;
+    font-size: 14px;
+    line-height: 1.21;
+  }
+  .btn:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    padding: 122px 0;
+  }
+  .btnWrapper {
+    flex-direction: row;
+  }
+  .btn:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  .authorAbout {
+    margin-bottom: 80px;
+  }
+}

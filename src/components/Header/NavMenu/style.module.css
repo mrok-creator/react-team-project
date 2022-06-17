@@ -1,0 +1,54 @@
+.link {
+  text-align: center;
+  width: 100%;
+  padding: 28px 0;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #E2E3E5;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.linkActive {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 28px 0;
+  text-decoration: none;
+  color: black;
+  text-decoration: underline solid #FF6B09;
+}
+
+@media screen and (min-width: 767px) {
+  .link {
+    font-size: 12px;
+
+    margin-right: 60px;
+    border-bottom: none;
+  }
+
+  .link:last-child {
+    margin-right: 40px;
+  }
+
+  .linkActive {
+    text-decoration: none;
+
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .link {
+    margin-right: 80px;
+    font-size: 16px;
+  }
+
+  .link:last-child {
+    margin-right: 80px;
+  }
+
+
+  .linkActive {
+    text-decoration: underline solid #FF6B09;
+
+  }
+}

@@ -47,6 +47,14 @@ export const getCurrentUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error);
     }
+  },
+  {
+    condition: (_, { getState }) => {
+      const { auth } = getState();
+      const { accessToken } = auth;
+      if (!accessToken) return false;
+      return;
+    },
   }
 );
 

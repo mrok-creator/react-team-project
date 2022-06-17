@@ -1,0 +1,66 @@
+.container {
+  background-color: #02172a;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.4);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 56px;
+}
+
+.authors {
+  margin-right: 4px;
+}
+
+.text {
+  margin-right: 4px;
+  padding-right: 4px;
+  border-right: 1px solid;
+}
+
+.img {
+  margin-right: 4px;
+  display: inline-block;
+}
+
+.copy {
+  margin-right: 4px;
+}
+
+.students {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 767px) {
+  .container {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .authors {
+    margin-right: 1em;
+  }
+
+  .text {
+    margin-right: 1em;
+    padding-right: 1em;
+    border-right: 1px solid;
+  }
+
+  .img {
+    margin-right: 1em;
+    display: inline-block;
+  }
+
+  .copy {
+    margin-right: 1em;
+  }
+}

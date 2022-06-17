@@ -1,0 +1,110 @@
+.navContainer {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid #E2E3E5;
+
+  justify-content: space-around;
+  align-items: center
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+
+
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+.menuButton {
+  cursor: pointer;
+  margin-left: 6%;
+  padding-left: 20px;
+  border-left: 1px solid #e2e3e5;
+
+}
+
+
+
+.name {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.menu {
+  display: none;
+}
+
+.logOut {
+  padding-left: 20px;
+  border-left: 1px solid #e2e3e5;
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 767px) {
+  .navContainer {
+    max-width: none;
+    justify-content: space-between;
+  }
+
+  .name {
+    display: block;
+  }
+
+  .logOut {
+    display: block;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .menuButton {
+    display: none;
+  }
+}
+
+
+
+@media screen and (min-width: 1279px) {
+  .navContainer {
+    max-width: none;
+    justify-content: space-between;
+  }
+
+  .logo {
+    /* margin-right: 41%; */
+  }
+
+  .name {
+    display: block;
+  }
+
+  .logOut {
+    display: block;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  .letter {
+    margin-right: 20px;
+  }
+
+  .name {
+    margin-right: 40px;
+    font-size: 14px;
+  }
+}

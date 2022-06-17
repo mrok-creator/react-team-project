@@ -44,10 +44,9 @@ const authSlice = createSlice({
       isLogin: true,
       userData: payload,
     }),
-    [getCurrentUser.rejected]: (store, { payload }) => ({
-      loading: false,
+    [getCurrentUser.rejected]: (_, { payload }) => ({
+      ...initialState,
       error: payload,
-      accessToken: '',
     }),
     //логаут
     [logOut.pending]: (store, _) => ({ ...store, loading: true, error: null }),
