@@ -8,7 +8,10 @@ class Graffic extends Component {
     return (
       <VictoryPie
         data={[
-          { x: `${items.result} Correct`, y: Number.parseInt(items.result) },
+          {
+            x: `${items.result} Correct`,
+            y: Number.parseInt(items.result),
+          },
           {
             x: `${100 - Number.parseInt(items.result)}% Incorrect`,
             y: 100 - Number.parseInt(items.result),
@@ -18,8 +21,8 @@ class Graffic extends Component {
           duration: 2000,
         }}
         colorScale={['var(--accent-color)', '#D7D7D7']}
-        height={200}
-        // width={156}
+        height={250}
+        style={{ labels: { fontSize: 10, fontWeight: 'bold' } }}
       />
     );
   }
