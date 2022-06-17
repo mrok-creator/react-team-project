@@ -1,0 +1,16 @@
+.link {
+  text-align: center;
+  width: 100%;
+  padding: 28px 0;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #E2E3E5;
+
+}
+
+.linkActive {
+  padding: 28px 0;
+  text-decoration: none;
+  color: black;
+  text-decoration: underline solid #FF6B09;
+}
