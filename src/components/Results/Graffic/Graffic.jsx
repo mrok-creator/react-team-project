@@ -18,7 +18,7 @@ class Graffic extends Component {
           },
         ]}
         animate={{
-          duration: 2000,
+          duration: 1000,
         }}
         colorScale={['var(--accent-color)', '#D7D7D7']}
         height={250}

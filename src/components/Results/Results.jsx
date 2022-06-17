@@ -6,7 +6,10 @@ import image from 'shared/images/image.png';
 import { useState, useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { getTypeQuestions, getTestAnswers } from 'redux/testInfo/testInfo-selector';
+import {
+  getTypeQuestions,
+  getTestAnswers,
+} from 'redux/testInfo/testInfo-selector';
 import { getResult } from 'shared/services/test';
 import Graffic from './Graffic';
 import { actions } from 'redux/testInfo/testInfo-slice';
@@ -14,9 +17,9 @@ import { actions } from 'redux/testInfo/testInfo-slice';
 const Results = () => {
   const [result, setResult] = useState({
     items: {
-      result: '59%',
-      mainMessage: 'Not bad!',
-      secondaryMessage: 'But you still need to learn some materials.',
+      result: '0%',
+      mainMessage: '',
+      secondaryMessage: '',
     },
     loading: false,
     error: null,
@@ -62,7 +65,7 @@ const Results = () => {
       <div className={styles.border}>
         <h3 className={styles.description}>[ {testType}_]</h3>
       </div>
-      {loading && <p className={styles.loading}>LOADING...</p>}
+      {/* {loading && <p className={styles.loading}>LOADING...</p>} */}
       <div>
         <Graffic items={items} />
       </div>
