@@ -1,5 +1,5 @@
 .container {
-  background-color: #02172A;
+  background-color: #02172a;
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -9,13 +9,11 @@
   line-height: 1.2;
   align-items: center;
   color: rgba(255, 255, 255, 0.4);
-  position: absolute;
-  top: 100vh;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   height: 56px;
-  transform: translateY(-100%);
 }
-
 
 .authors {
   margin-right: 4px;
@@ -27,7 +25,6 @@
   border-right: 1px solid;
 }
 
-
 .img {
   margin-right: 4px;
   display: inline-block;
@@ -36,7 +33,6 @@
 .copy {
   margin-right: 4px;
 }
-
 
 .students {
   cursor: pointer;
@@ -47,7 +43,6 @@
   .container {
     justify-content: center;
     font-size: 12px;
-
   }
 
   .authors {
@@ -59,7 +54,6 @@
     padding-right: 1em;
     border-right: 1px solid;
   }
-
 
   .img {
     margin-right: 1em;

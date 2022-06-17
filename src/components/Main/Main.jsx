@@ -14,7 +14,7 @@ function Main() {
 
   const handleClick = e => {
     dispatch(actions.addType(e.target.textContent));
-    navigate('/testPage');
+    navigate('/test');
   };
 
   return (
