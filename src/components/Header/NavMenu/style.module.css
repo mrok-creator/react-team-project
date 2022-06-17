@@ -14,3 +14,36 @@
   color: black;
   text-decoration: underline solid #FF6B09;
 }
+
+@media screen and (min-width: 767px) {
+  .link {
+    margin-right: 60px;
+    border-bottom: none;
+  }
+
+  .link:last-child {
+    margin-right: 40px;
+  }
+
+  .linkActive {
+    text-decoration: none;
+
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .link {
+    margin-right: 80px;
+
+  }
+
+  .link:last-child {
+    margin-right: 80px;
+  }
+
+
+  .linkActive {
+    text-decoration: underline solid #FF6B09;
+
+  }
+}

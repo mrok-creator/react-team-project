@@ -1,10 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import s from "./style.module.css"
-import { isUserLogin } from "redux/auth/auth-selector"
-import { useSelector } from "react-redux"
-function NavMenu() {
-  // const isUserLoggedIn = useSelector(isUserLogin)
-  const isUserLoggedIn = true
+function NavMenu({ isUserLoggedIn }) {
   const getActiveLink = ({ isActive }) => isActive ? (s.linkActive + " " + s.link) : s.link;
   return (
     <>
