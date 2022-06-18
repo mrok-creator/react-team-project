@@ -1,6 +1,8 @@
 import { useState } from 'react';
-
 import { initialState } from './initialState';
+
+import LoginByGoogle from '../../components/LoginByGoogle';
+
 import s from './authForm.module.css';
 // import google from '../../images/google.png';
 
@@ -32,6 +34,9 @@ const AuthForm = ({ register, login }) => {
       <div className={s.imgWrap}>
         <img className={s.img} src={google} alt="google" />
       </div> */}
+
+      <LoginByGoogle />
+
       <h2 className={s.title}>Login to our app using e-mail and password:</h2>
       <form action="" className={s.form}>
         <div className={s.wrapInput}>
