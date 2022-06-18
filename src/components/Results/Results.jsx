@@ -33,8 +33,7 @@ const Results = () => {
     const resultFetch = async () => {
       setResult(prevState => ({ ...prevState, loading: true, error: null }));
       try {
-        const type =
-          getTypeQuestions === 'QA technical training' ? 'tech' : 'theory';
+        const type = testType === 'Testing theory' ? 'theory' : 'tech';
         const data = await getResult(type, testAnswers);
         setResult(prevState => ({
           ...prevState,
@@ -50,7 +49,7 @@ const Results = () => {
       }
     };
     resultFetch();
-  }, [testAnswers]);
+  }, [testAnswers, testType]);
 
   const tryAgainClick = () => {
     const action = actions.removeAnswers();
@@ -91,7 +90,7 @@ const Results = () => {
         <li className={styles.item}>
           Correct answers -{' '}
           <span className={styles.number}>
-            {Number.parseInt((12 / 100) * Number.parseFloat(items.result))}
+            {Math.round((12 / 100) * Number.parseFloat(items.result))}
           </span>
         </li>
         <span className={styles.decoration}>|</span>
