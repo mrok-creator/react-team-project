@@ -1,82 +1,101 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from "react"
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+
 import LetteredAvatar from 'react-lettered-avatar';
-
-import useGetUserData from 'shared/hooks/useGetUserData';
-
-
-import logo from 'svg/logo1.svg'
-import logOutIcon from "svg/sign-out.svg"
-import Modal from "shared/components/Modal"
-import menu from "svg/menu-24px.svg"
-
-import MobileMenu from './MobileMenu/MobileMenu';
-import NavMenu from "components/Header/NavMenu"
-
-
-
 import useLogin from 'shared/hooks/useLogin';
 import { logOut } from 'redux/auth/auth-operation';
+import useGetUserData from 'shared/hooks/useGetUserData';
 
+import MobileMenu from './MobileMenu/MobileMenu';
+import NavMenu from 'components/Header/NavMenu';
+import Modal from 'shared/components/Modal';
 import s from './style.module.css';
+
+import logo from 'shared/images/svg/logo1.svg';
+import logOutIcon from 'shared/images/svg/sign-out.svg';
+import menu from 'shared/images/svg/menu-24px.svg';
 
 const Header = () => {
   const dispatch = useDispatch();
   const [menuStatus, setMenuStatus] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleClick = () => {
-    setMenuStatus(prev => !prev)
-  }
+    setMenuStatus(prev => !prev);
+  };
   const logOutAction = () => {
-    dispatch(logOut())
-  }
+    dispatch(logOut());
+  };
   const goHome = () => {
-    navigate("/")
-  }
+    navigate('/');
+  };
   const onClose = () => {
-    setMenuStatus(false)
-  }
+    setMenuStatus(false);
+  };
 
-
-
-  const isUserLoggedIn = useLogin()
+  const isUserLoggedIn = useLogin();
   const user = useGetUserData();
   let data = [];
   if (user?.email) {
-    data = user.email.split("")
+    data = user.email.split('');
     let i = '';
     for (let index = 1; index < data.length; index++) {
       const element = data[index];
 
-      if (element.toUpperCase() === element && element !== element.toLowerCase()) {
-        i = index
-        break
+      if (
+        element.toUpperCase() === element &&
+        element !== element.toLowerCase()
+      ) {
+        i = index;
+        break;
       }
-
     }
     if (!i) {
-      data = data.join("").split('@')[0]
+      data = data.join('').split('@')[0];
     } else {
-      data = data.join("").split(data[i])[0]
+      data = data.join('').split(data[i])[0];
     }
   }
 
   return (
     <div className={s.navContainer}>
       <img src={logo} onClick={goHome} alt="" className={s.logo} />
-      <div className={s.linkContainer}><div className={s.menu}><NavMenu isUserLoggedIn={isUserLoggedIn} /></div>
-        {isUserLoggedIn && <div className={s.letter}><LetteredAvatar
-          name={data[0]}
-          size={30}
-          backgroundColor="#eee"
-        /> </div >}
+      <div className={s.linkContainer}>
+        <div className={s.menu}>
+          <NavMenu isUserLoggedIn={isUserLoggedIn} />
+        </div>
+        {isUserLoggedIn && (
+          <div className={s.letter}>
+            <LetteredAvatar name={data[0]} size={30} backgroundColor="#eee" />{' '}
+          </div>
+        )}
         {isUserLoggedIn && <div className={s.name}>{data}</div>}
-        {isUserLoggedIn && <img onClick={logOutAction} className={s.logOut} src={logOutIcon} alt="" />}</div>
-      {!menuStatus && <img className={s.menuButton} onClick={handleClick} src={menu} alt="" />}
-      {menuStatus && <Modal close={onClose} children={<MobileMenu handleClick={handleClick} isUserLoggedIn={isUserLoggedIn} logOut={logOutAction} />} />}
+        {isUserLoggedIn && (
+          <img
+            onClick={logOutAction}
+            className={s.logOut}
+            src={logOutIcon}
+            alt=""
+          />
+        )}
+      </div>
+      {!menuStatus && (
+        <img className={s.menuButton} onClick={handleClick} src={menu} alt="" />
+      )}
+      {menuStatus && (
+        <Modal
+          close={onClose}
+          children={
+            <MobileMenu
+              handleClick={handleClick}
+              isUserLoggedIn={isUserLoggedIn}
+              logOut={logOutAction}
+            />
+          }
+        />
+      )}
     </div>
-  )
+  );
 };
 
 export default Header;
