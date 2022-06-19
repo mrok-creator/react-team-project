@@ -7,6 +7,17 @@
   --white-color: #ffffff;
   --black-color: #000000;
   --main-bg-color: #e5e5e5;
+  --btn-gradient: linear-gradient(#39598a, #79d7ed);
+  --btn-border: #ffffff;
+}
+[data-theme='dark'] {
+  --accent-color: #b04803;
+  --bg-color: #035199;
+  --white-color: #000000;
+  --black-color: #ffffff;
+  --main-bg-color: #121212;
+  --btn-gradient: linear-gradient(#091236, #1e215d);
+  --btn-border: #6b8096;
 }
 
 *,
