@@ -1,5 +1,5 @@
 .section {
-  padding: 26px 0 20px;
+  padding: 26px 0 76px;
 }
 .meta {
   display: flex;
@@ -28,8 +28,8 @@
 
 @media screen and (min-width: 768px) {
   .section {
-    padding-top: 40px;
-    padding-bottom: 273px;
+    padding-top: 60px;
+    padding-bottom: 150px;
   }
   .btn {
     font-size: 14px;
@@ -44,6 +44,8 @@
 }
 @media screen and (min-width: 1280px) {
   .section {
+    padding-top: 90px;
+
     padding-bottom: 107px;
   }
   .subContainer {
