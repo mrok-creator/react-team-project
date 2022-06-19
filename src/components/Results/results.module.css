@@ -3,7 +3,7 @@
 .border {
     margin-left: auto;
     margin-right: auto;
-    /* margin-bottom: 18px; */
+    margin-bottom: -15px;
     padding-bottom: 16px;
     width: 130px;
     border-bottom: solid rgba(0, 0, 0, 0.15) 1px ;
@@ -12,9 +12,15 @@
     
    .border { width: 330px;
 padding-bottom: 32px;
-/* margin-bottom: 40px; */
+margin-bottom: -30px;
 
 }
+ }
+
+ @media screen and (min-width: 1280px) {
+     .border {
+         margin-bottom: -65px;
+     }
  }
 
 .description {
@@ -72,16 +78,19 @@ padding-bottom: 32px;
 .list {
     display: flex;
     justify-content: center;
+    margin-top: -15px;
     margin-bottom: 20px;
     align-items: center;
 }
 @media screen and (min-width: 768px) {
     .list {
+        margin-top: -30px;
         margin-bottom: 32px;
     }
 }
 @media screen and (min-width: 1280px) {
     .list {
+        margin-top: -65px;
         margin-bottom: 28px;
     }
 }
@@ -118,16 +127,16 @@ padding-bottom: 32px;
 
 .image {
     margin: 0 auto 20px auto;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     
 }
 
 @media screen and (min-width: 768px) {
     .image {
         margin: 0 auto 8px auto;
-        width: 176px;
-            height: 176px;
+        width: 150px;
+            height: 150px;
 
     }
 }
