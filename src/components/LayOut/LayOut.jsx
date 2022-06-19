@@ -12,7 +12,6 @@ const LayOut = () => {
       <section className={style.footer}>
         <Footer />
       </section>
-      z
     </>
   );
 };
