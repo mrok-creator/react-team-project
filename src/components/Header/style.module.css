@@ -1,17 +1,16 @@
 .navContainer {
+  position: relative;
   display: flex;
   padding: 20px;
-  border-bottom: 1px solid #E2E3E5;
+  border-bottom: 1px solid #e2e3e5;
 
   justify-content: space-around;
-  align-items: center
+  align-items: center;
 }
 
 .linkContainer {
   display: flex;
   align-items: center;
-
-
 }
 
 .logo {
@@ -24,10 +23,7 @@
   margin-left: 6%;
   padding-left: 20px;
   border-left: 1px solid #e2e3e5;
-
 }
-
-
 
 .name {
   margin-left: 20px;
@@ -70,8 +66,6 @@
     display: none;
   }
 }
-
-
 
 @media screen and (min-width: 1279px) {
   .navContainer {
