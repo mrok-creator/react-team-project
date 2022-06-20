@@ -57,7 +57,7 @@
 
   .list {
     grid-template-columns: repeat(2, 335px);
-    grid-template-rows: repeat(4, 370px);
+    grid-template-rows: repeat(4, 390px);
   }
   .box {
     width: 322px;
@@ -71,7 +71,7 @@
 
   .list {
     grid-template-columns: repeat(4, 288px);
-    grid-template-rows: repeat(2, 370px);
+    grid-template-rows: repeat(2, 390px);
   }
   .box {
     width: 322px;
