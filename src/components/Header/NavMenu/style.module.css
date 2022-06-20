@@ -30,10 +30,7 @@
     margin-right: 40px;
   }
 
-  .linkActive {
-    text-decoration: none;
 
-  }
 }
 
 @media screen and (min-width: 1279px) {
