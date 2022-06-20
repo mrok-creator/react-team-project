@@ -7,6 +7,23 @@
   --white-color: #ffffff;
   --black-color: #000000;
   --main-bg-color: #e5e5e5;
+  --btn-gradient: linear-gradient(#39598a, #79d7ed);
+  --btn-border: #ffffff;
+  --bgc-auth: #f5f6fb;
+  --input-color: #bbbbbb;
+  --incorrect-bgc: #d7d7d7;
+}
+[data-theme='dark'] {
+  --accent-color: #b04803;
+  --bg-color: #035199;
+  --white-color: #000000;
+  --black-color: #ffffff;
+  --main-bg-color: #121212;
+  --btn-gradient: linear-gradient(#091236, #1e215d);
+  --btn-border: #6b8096;
+  --bgc-auth: #767070;
+  --input-color: #fff;
+  --incorrect-bgc: #412e2e;
 }
 
 *,

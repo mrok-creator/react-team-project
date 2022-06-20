@@ -5,7 +5,10 @@
     "surename": "Kasianenko ",
     "id": 1,
     "descr": "There is no patch for human stupidity",
-    "posn": "Team-Lead | Developer"
+    "posn": "Team-Lead | Developer",
+    "instagram": "https://www.instagram.com/ny_ok_yopta/",
+    "wiki": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D1%82%D0%BD%D0%B8%D0%BA,_%D0%9A%D0%B5%D0%B2%D0%B8%D0%BD",
+    "github": "https://github.com/mrok-creator"
   },
   {
     "avatar": "https://pbs.twimg.com/profile_images/1358380209439973381/25ZJGVnP_400x400.jpg",
@@ -13,7 +16,10 @@
     "surename": "Demydenko",
     "id": 2,
     "descr": "Anyone who buys or sells a stock, bond, or commodity for profit is a speculator if he uses intellectual foresight. If he does not do this, he is gambling.",
-    "posn": "Developer"
+    "posn": "Developer",
+    "instagram": "https://www.instagram.com/",
+    "wiki": "https://ru.wikipedia.org/wiki/%D0%A3%D0%B0%D0%B9%D0%BA%D0%BE%D1%84%D1%84,_%D0%A0%D0%B8%D1%87%D0%B0%D1%80%D0%B4",
+    "github": "https://github.com/mrnobody3"
   },
   {
     "avatar": "https://multiurok.ru/img/312085/image_5a4e4dae75dde.jpg",
@@ -21,7 +27,10 @@
     "surename": "Skrypka",
     "id": 3,
     "descr": "I am going against the current, but the direction of the current will change.",
-    "posn": "Developer"
+    "posn": "Developer",
+    "instagram": "https://www.instagram.com/",
+    "wiki": "https://ru.wikipedia.org/wiki/%D0%A8%D1%80%D1%91%D0%B4%D0%B8%D0%BD%D0%B3%D0%B5%D1%80,_%D0%AD%D1%80%D0%B2%D0%B8%D0%BD",
+    "github": "https://github.com/Andari757"
   },
   {
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/2/25/Franklin-Benjamin-LOC.jpg",
@@ -29,7 +38,10 @@
     "surename": "Lobtsov",
     "id": 4,
     "descr": "Investments in knowledge always give the highest profit.",
-    "posn": "Developer"
+    "posn": "Developer",
+    "instagram": "https://www.instagram.com/",
+    "wiki": "https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D0%BB%D0%B8%D0%BD,_%D0%91%D0%B5%D0%BD%D0%B4%D0%B6%D0%B0%D0%BC%D0%B8%D0%BD",
+    "github": "https://github.com/PashaL88"
   },
   {
     "avatar": "https://www.tronweekly.com/wp-content/uploads/2020/02/nakmoto.jpg",
@@ -37,7 +49,10 @@
     "surename": "Tagirov",
     "id": 5,
     "descr": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks",
-    "posn": "Developer"
+    "posn": "Developer",
+    "instagram": "https://www.instagram.com/",
+    "wiki": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D1%82%D0%BE%D1%81%D0%B8_%D0%9D%D0%B0%D0%BA%D0%B0%D0%BC%D0%BE%D1%82%D0%BE",
+    "github": "https://github.com/AnthonyUPTN"
   },
   {
     "avatar": "https://rafaelleitao.com/wp-content/uploads/2017/08/6-mentiras-e-7-verdades-Bobby-Fischer-2.jpg",
@@ -45,7 +60,10 @@
     "surename": "Muraviov",
     "id": 6,
     "descr": "I play fair and play to win. If I lose, I take medicines.",
-    "posn": "Developer"
+    "posn": "Developer",
+    "instagram": "https://www.instagram.com/",
+    "wiki": "https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D1%88%D0%B5%D1%80,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82_%D0%94%D0%B6%D0%B5%D0%B9%D0%BC%D1%81",
+    "github": "https://github.com/OlegMuraviov"
   },
   {
     "avatar": "https://s0.rbk.ru/v6_top_pics/media/img/6/08/755220583450086.jpg",
@@ -53,6 +71,9 @@
     "surename": "Kulakov",
     "id": 7,
     "descr": "What matters is the scale of the action. their absolute value. The sign doesn't matter. A minus can easily change to a plus, and vice versa. But zero never changes.",
-    "posn": "Scrum-master | Developer"
+    "posn": "Scrum-master | Developer",
+    "instagram": "https://www.instagram.com/bead.player/",
+    "wiki": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%B2%D1%80%D0%BE%D0%B4%D0%B8,_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%9F%D0%B0%D0%BD%D1%82%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%B8%D1%87",
+    "github": "https://github.com/unkindled11"
   }
 ]

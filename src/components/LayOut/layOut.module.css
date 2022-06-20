@@ -1,6 +1,5 @@
 .header {
-  background-color: #F5F6FB;
-
+  background-color: var(--bgc-auth);
 }
 
 .footer {

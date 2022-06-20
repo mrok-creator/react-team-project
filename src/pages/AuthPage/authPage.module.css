@@ -2,7 +2,8 @@
   min-width: 320px;
   margin: 0 auto;
   padding: 40px 20px 34px;
-  background-color: #f5f6fb;
+  /* background-color: #f5f6fb; */
+  /* background-color: var(--bgc-auth); */
 }
 
 .wrap {

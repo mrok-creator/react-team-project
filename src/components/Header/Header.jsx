@@ -10,6 +10,7 @@ import useGetUserData from 'shared/hooks/useGetUserData';
 import MobileMenu from './MobileMenu/MobileMenu';
 import NavMenu from 'components/Header/NavMenu';
 import Modal from 'shared/components/Modal';
+import ToggleTheme from 'components/ToggleTheme';
 import s from './style.module.css';
 
 import logo from 'shared/images/svg/logo1.svg';
@@ -94,6 +95,7 @@ const Header = () => {
           }
         />
       )}
+      <ToggleTheme />
     </div>
   );
 };
