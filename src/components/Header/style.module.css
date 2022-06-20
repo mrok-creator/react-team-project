@@ -32,8 +32,6 @@
 .name {
   height: 100%;
   margin-left: 20px;
-  margin-right: 20px;
-  padding-top: 28px;
   display: none;
   font-size: 12px;
   font-weight: 500;
@@ -74,7 +72,11 @@
   }
 
   .name {
-    display: block;
+    margin-right: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .logOut {
@@ -103,9 +105,7 @@
     /* margin-right: 41%; */
   }
 
-  .name {
-    display: block;
-  }
+  .name {}
 
   .logOut {
     display: block;
