@@ -20,9 +20,15 @@ class Graffic extends Component {
         animate={{
           duration: 1000,
         }}
-        colorScale={['var(--accent-color)', '#D7D7D7']}
+        colorScale={['var(--accent-color)', 'var(--incorrect-bgc)']}
         height={250}
-        style={{ labels: { fontSize: 10, fontWeight: 'bold' } }}
+        style={{
+          labels: {
+            fontSize: 10,
+            fontWeight: 'bold',
+            fill: 'var(--black-color)',
+          },
+        }}
       />
     );
   }

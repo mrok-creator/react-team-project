@@ -35,7 +35,8 @@ function TestModal({ items }) {
   };
   const handelResult = () => {
     navigate('/results');
-    const action = actions.addAnswers({ answers: [...mapAnswers.values()] });
+    const newObj = { answers: [...mapAnswers.values()] };
+    const action = actions.addAnswers(newObj);
     dispatch(action);
   };
 
@@ -45,6 +46,7 @@ function TestModal({ items }) {
   return (
     <>
       <TestCard
+        total={items.length}
         item={activeCard}
         index={idx}
         getAnswer={getAnswer}
