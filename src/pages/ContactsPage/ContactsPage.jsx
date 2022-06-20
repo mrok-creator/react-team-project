@@ -1,10 +1,14 @@
+import Wikipedia from './Socials/SocialLogo/Wikipedia';
+import Instagram from './Socials/SocialLogo/Instagram';
+import Github from './Socials/SocialLogo/Github';
+
 import data from './dataContacts.json';
 
 import s from './contactsPage.module.css';
 
 function ContactsPage() {
   const contactItem = data.map(
-    ({ id, avatar, name, surename, posn, descr }) => {
+    ({ id, avatar, name, surename, posn, descr, instagram, github, wiki }) => {
       return (
         <li key={id} className={s.card}>
           <div className={s.imgWrap}>
@@ -16,6 +20,38 @@ function ContactsPage() {
               {name} <br /> {surename}
             </h2>
             <p className={s.position}>{posn}</p>
+            <ul className={s.IconList}>
+              <li className={s.item}>
+                <a rel="noopener noreferrer" target="_blank" href={instagram}>
+                  <Instagram
+                    className={s.icon}
+                    width="17"
+                    height="17"
+                    fill="black"
+                  />
+                </a>
+              </li>
+              <li className={s.item}>
+                <a rel="noopener noreferrer" target="_blank" href={wiki}>
+                  <Wikipedia
+                    className={s.icon}
+                    width="17"
+                    height="17"
+                    fill="black"
+                  />
+                </a>
+              </li>
+              <li className={s.item}>
+                <a rel="noopener noreferrer" target="_blank" href={github}>
+                  <Github
+                    className={s.icon}
+                    width="17"
+                    height="17"
+                    fill="black"
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
         </li>
       );
